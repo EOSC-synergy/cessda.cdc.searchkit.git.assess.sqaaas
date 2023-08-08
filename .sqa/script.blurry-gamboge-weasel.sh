@@ -1,4 +1,4 @@
 (
-cd bitbucket.org/cessda/cessda.cdc.searchkit &&
+cd github.com/cessda/cessda.cdc.searchkit &&
     licensee detect . --confidence 60 --json
 )

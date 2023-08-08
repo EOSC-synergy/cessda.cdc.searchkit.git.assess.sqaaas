@@ -1,66 +1,62 @@
 config:
   credentials: []
   project_repos:
-    bitbucket.org/cessda/cessda.cdc.searchkit:
-      branch: master
-      repo: https://bitbucket.org/cessda/cessda.cdc.searchkit.git
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.6
+      branch: release/1.7.11
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda.cdc.searchkit:
+      branch: main
+      repo: https://github.com/cessda/cessda.cdc.searchkit.git
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      bitbucket.org/cessda/cessda.cdc.searchkit git:
+      github.com/cessda/cessda.cdc.searchkit git:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-carmine-tarantula.sh
-        container: qc.acc_blurry-buff-wolfhound
+        - /usr/bin/env sh .sqa/script.wiggy-alizarin-loon.sh
+        container: qc.acc_chewy-sepia-whale
   QC.Doc:
     repos:
-      bitbucket.org/cessda/cessda.cdc.searchkit find_doc_files.py:
+      github.com/cessda/cessda.cdc.searchkit find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-wheat-greyhound.sh
-        container: qc.doc_woolly-platinum-turtle
-      bitbucket.org/cessda/cessda.cdc.searchkit git:
+        - /usr/bin/env sh .sqa/script.boozy-seashell-capybara.sh
+        container: qc.doc_hilly-lavender-ray
+      github.com/cessda/cessda.cdc.searchkit git:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-cream-boar.sh
-        container: qc.doc_muzzy-green-rat
-      bitbucket.org/cessda/cessda.cdc.searchkit markdownlint:
+        - /usr/bin/env sh .sqa/script.chewy-eggplant-sheepdog.sh
+        container: qc.doc_flabby-lilac-lion
+      github.com/cessda/cessda.cdc.searchkit markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-chestnut-sparrow.sh
-        container: qc.doc_pasty-chestnut-spaniel
+        - /usr/bin/env sh .sqa/script.sunny-red-dolphin.sh
+        container: qc.doc_sleepy-smalt-chinchilla
   QC.Lic:
     repos:
-      bitbucket.org/cessda/cessda.cdc.searchkit licensee:
+      github.com/cessda/cessda.cdc.searchkit licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-persimmon-flounder.sh
-        container: qc.lic_snappy-indigo-rattlesnake
+        - /usr/bin/env sh .sqa/script.blurry-gamboge-weasel.sh
+        container: qc.lic_baggy-seashell-dollar
   QC.Met:
     repos:
-      bitbucket.org/cessda/cessda.cdc.searchkit cff-converter-python:
+      github.com/cessda/cessda.cdc.searchkit cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-lavender-capuchin.sh
-        container: qc.met_jumpy-tomato-argentino
+        - /usr/bin/env sh .sqa/script.clammy-eggplant-tiger.sh
+        container: qc.met_dorky-red-opossum
   QC.Sty:
     repos:
-      bitbucket.org/cessda/cessda.cdc.searchkit hadolint:
+      github.com/cessda/cessda.cdc.searchkit hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-azure-dhole.sh
-        container: qc.sty_leaky-taupe-pinscher
-      bitbucket.org/cessda/cessda.cdc.searchkit jsonlint:
+        - /usr/bin/env sh .sqa/script.droopy-aqua-barb.sh
+        container: qc.sty_nerdy-cream-bullfrog
+      github.com/cessda/cessda.cdc.searchkit jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-champagne-flounder.sh
-        container: qc.sty_sleazy-zucchini-maltese
-      bitbucket.org/cessda/cessda.cdc.searchkit stylelint:
-        commands:
-        - /usr/bin/env sh .sqa/script.ready-lavender-penguin.sh
-        container: qc.sty_wiggy-ultramarine-stingray
+        - /usr/bin/env sh .sqa/script.chummy-black-catfish.sh
+        container: qc.sty_sloppy-carmine-shark
   QC.Ver:
     repos:
-      bitbucket.org/cessda/cessda.cdc.searchkit get_git_tags.py:
+      github.com/cessda/cessda.cdc.searchkit get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-teal-drever.sh
-        container: qc.ver_muzzy-brass-crocodile
-timeout: 1800
+        - /usr/bin/env sh .sqa/script.flimsy-fuchsia-ferret.sh
+        container: qc.ver_gimpy-amber-rat
+timeout: 5400
